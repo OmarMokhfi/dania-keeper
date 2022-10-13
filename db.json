@@ -1,0 +1,74 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Inbox",
+      "slug": "inbox",
+      "description": "This is related to keep myself in touch with my co-workers and friends, as communication is a very important aspect of our lives.",
+      "trackedTime": 420
+    },
+    {
+      "id": 2,
+      "title": "MERN",
+      "slug": "mern",
+      "description": "This project is about learning MERN stack.",
+      "trackedTime": 320
+    },
+    {
+      "id": 3,
+      "title": "ALX Scholarship",
+      "slug": "alx-scholarship",
+      "description": "This is a path Data Analyis from ALX Scholarship that I am following",
+      "trackedTime": 263
+    },
+    {
+      "title": "ESI Studies",
+      "slug": "esi-studies",
+      "description": "ESI Studies",
+      "trackedTime": 80,
+      "id": 4
+    },
+    {
+      "title": "CRP Graphs",
+      "description": "This is a TP that I need to work on",
+      "slug": "crp-graphs",
+      "trackedTime": 0,
+      "id": 5
+    }
+  ],
+  "tasks": [
+    {
+      "name": "task-inbox-1",
+      "description": "",
+      "time": 60,
+      "remainingTime": 20,
+      "projectId": 1,
+      "isRunning": false,
+      "remainingSeconds": 59,
+      "completed": true,
+      "id": 5
+    },
+    {
+      "name": "task-inbox-2",
+      "description": "",
+      "time": 60,
+      "remainingTime": 3,
+      "projectId": 1,
+      "isRunning": false,
+      "remainingSeconds": 59,
+      "completed": true,
+      "id": 6
+    },
+    {
+      "name": "task-inbox-1",
+      "description": "",
+      "time": 60,
+      "remainingTime": 0,
+      "projectId": 1,
+      "isRunning": false,
+      "remainingSeconds": 0,
+      "completed": true,
+      "id": 5
+    }
+  ]
+}

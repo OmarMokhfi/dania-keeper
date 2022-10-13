@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter Tight", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.App,
+#root {
+  @apply h-full;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Navigation Bar */
+
+.top-navigation {
+  @apply flex flex-row items-center justify-end ml-60 
+  w-[calc(100vw-15rem)] h-[15] fixed top-0
+  bg-white dark:bg-gray-700
+  border-purple-200 dark:border-gray-600 border-b-1 m-0;
+}
+
+.top-navigation-icon {
+  @apply text-gray-400 dark:text-gray-100 m-4 
+    transition duration-300 ease-in-out 
+    hover:text-[#888DA7]
+    cursor-pointer;
+}
+
+.top-navigation-icon:first {
+  @apply mx-4;
+}
+
+.side-navigation-bar {
+  @apply bg-purple-800 dark:bg-gray-900
+    text-purple-200 dark:text-gray-100
+    h-full w-60 fixed top-0 p-5;
+}
+
+.side-link {
+  @apply flex items-center rounded-lg px-4 py-2 text-purple-300 dark:text-gray-100
+  hover:bg-purple-600 dark:hover:bg-gray-700 dark:hover:text-purple-700
+  transition duration-300 ease-in-out cursor-pointer
+  hover:text-purple-900;
+}
+
+.side-link-nested {
+  @apply flex items-center rounded-lg px-2 py-2 
+  transition duration-300 ease-in-out cursor-pointer
+  text-purple-300 hover:bg-purple-600 hover:text-purple-900
+  dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:text-purple-700;
+}
+
+.side-nav-wrapper {
+  @apply mt-6 flex flex-col gap-2;
+}
+
+#keeper {
+  @apply block text-center w-32 text-2xl tracking-widest
+  transition duration-300 ease-in-out cursor-pointer hover:opacity-80;
+}
+
+/* Board & Add project */
+.board,
+#add-project,
+#statistics {
+  @apply ml-[15rem] pt-16 px-4 pb-4 max-h-screen overflow-auto
+  dark:bg-gray-700 dark:text-gray-600 min-h-full;
+}
+
+#add-project p {
+  @apply py-3 dark:text-gray-100;
+}
+
+/* Form */
+#add-task h2,
+#add-project h2 {
+  @apply text-xl font-medium my-2 dark:text-gray-200 text-gray-800;
+}
+
+#add-task form {
+  @apply flex flex-col gap-[0.4rem] items-center w-full justify-items-center;
+}
+
+#add-project h1,
+#statistics h1 {
+  @apply text-3xl font-bold my-2 dark:text-gray-200 text-gray-800;
+}
+
+.input-label {
+  @apply block border-1 w-full overflow-hidden rounded-md border-gray-200 dark:border-gray-600 px-3 py-1 shadow-sm 
+  focus-within:border-purple-900 focus-within:ring-purple-900 focus-within:ring-purple-900
+  text-gray-700 dark:text-gray-100 dark:bg-gray-700;
+}
+
+.input {
+  @apply mt-1 w-full border-none p-0 focus:border-transparent 
+  focus:outline-none focus:border-purple-900 sm:text-sm bg-transparent
+  text-gray-700 dark:text-gray-100 dark:bg-gray-700;
+}
+
+#submit-task,
+#submit-project {
+  @apply bg-purple-900 rounded-md w-[11.5rem] py-[0.75rem]
+  text-purple-100 cursor-pointer hover:bg-purple-800 transition duration-300 ease-in-out;
+}
+
+#submit-project {
+  @apply my-2;
+}
+
+/* Project */
+
+#project-name {
+  @apply text-[1.75rem] mb-4 mt-1 font-bold text-gray-800 dark:text-gray-200;
+}
+
+/* Filter bar */
+
+#filter-bar {
+  @apply flex flex-row justify-start gap-5;
+}
+
+#filter-bar button {
+  @apply border-b p-1 border-gray-100;
+}
+
+/* Task */
+
+#task {
+  @apply flex flex-row border-1 justify-between items-center border-gray-200 dark:border-gray-600 my-4 p-[1.8rem] rounded-md;
+}
+
+.task-title {
+  @apply text-[1.3rem] font-medium text-purple-800 w-full;
+}
+
+.task-description {
+  @apply my-4 w-full;
+}
+
+.buttons-task-wrapper {
+  @apply flex flex-row gap-1 mt-2 w-full;
+}
+
+#timer {
+  @apply mr-3 p-[0.5rem] border-2 rounded-full dark:border-gray-600;
+}
+
+/* Project options */
+
+.project-option {
+  @apply text-gray-800 py-3;
+}
+
+#project-form {
+  @apply flex flex-col gap-1;
+}
+
+/* Task styling */
+
+#task-status-completed {
+  @apply text-gray-800 inline mx-2 rounded-md text-[0.75rem] p-[0.35rem] bg-green-400 text-white;
+}
+
+#task-status-in-progress {
+  @apply text-gray-800 inline mx-2 rounded-md text-[0.75rem] p-[0.35rem] bg-gray-500 text-white;
+}
+
+#task .right {
+  @apply w-12 h-12;
+}
+
+#pause-play {
+  @apply bg-transparent w-14 h-14;
+}
